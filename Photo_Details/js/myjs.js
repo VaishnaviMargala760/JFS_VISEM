@@ -12,6 +12,7 @@ function showDetails() {
 
     // Mapping names to photos
     let photos = {
+        "Vaishnavi": "images/24955A6626 id card.jpg",
         "guido": "images/guido.jpg",
         "dennis": "images/dennis.jpg",
         "james": "images/james.jpg",
@@ -33,6 +34,7 @@ function showDetails() {
 
     // Mapping details
     let details = {
+        "Vaishnavi": "Margala Vaishnavi Roll No: 24955A6626",
         "guido": "Guido van Rossum created Python in 1991.",
         "dennis": "Dennis Ritchie developed C and co-created UNIX.",
         "james": "James Gosling invented Java in 1995.",
