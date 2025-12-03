@@ -2,14 +2,14 @@
 <html>
 <head>
     <title>Display Photo and Information</title> 
-	<link rel="stylesheet"  href='css/mystyle.css'>
+    <link rel="stylesheet"  href='css/mystyle.css'>
 </head>
 
 <body>
 
     <h2>Select a Name to Display Photo & Info</h2>   
     <!-- Dropdown -->
-    <select id="nameSelect" onchange="showDetails()" style='height:40px; width:320px;'>
+    <select id="nameSelect" style='height:40px; width:320px;'>
         <option value="">-- Select Name --</option>
 
         <!-- Earlier personalities -->
@@ -34,6 +34,9 @@
         <option value="madhu">Madhu (JFS Trainer, CDC, IARE Hyderabad)</option>
     </select>
 
+    <!-- OK Button -->
+    <button id="confirmBtn" style='height:40px; width:80px; margin-left:10px; cursor:pointer; background-color:#4CAF50; color:white; border:none; border-radius:4px; font-size:14px; font-weight:bold;' onclick="showConfirmation()">OK</button>
+
     <div class="container">
 
         <!-- LEFT BOX: PHOTO -->
@@ -49,7 +52,21 @@
 
     </div>
 
-   <script src="js/myjs.js"> </script>
+   <script src="js/myjs.js"></script>
+   <script>
+       function showConfirmation() {
+           var selectedName = document.getElementById('nameSelect').value;
+           
+           if(selectedName === '') {
+               alert('Please select a person first!');
+               return;
+           }
+           
+           if(confirm('Do you want to display this person\'s photo and information?')) {
+               showDetails();
+           }
+       }
+   </script>
 
 </body>
 </html>
